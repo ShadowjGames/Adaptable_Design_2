@@ -83,7 +83,7 @@ p {
     background-image: url('Assets/Eliham/elementor-placeholder-image.webp');
     background-size: cover;
     background-position: center;
-    color: white;
+    color: rgb(1, 3, 50);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -144,7 +144,7 @@ p {
 /* Portfolio Section */
 .portfolio-section {
     padding: 100px 0;
-    background-color: #f9fafc;
+    background-color: rgb(1, 3, 50);
 }
 
 .portfolio-grid {
