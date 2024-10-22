@@ -18,8 +18,8 @@
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            background-color: #f4f6f9;
-            color: #333;
+            background-color: rgb(1, 3, 50);
+            color: #fff;
             margin: 0;
             padding: 0;
         }
@@ -109,34 +109,45 @@
         .header-title {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            color: white;
+            color: #222;
         }
 
         .header-subtitle {
             font-size: 1.5rem;
             margin-bottom: 30px;
-            color: white;
+            color: #222;
         }
 
         .header-description {
             font-size: 1.2rem;
             margin-bottom: 30px;
             max-width: 600px;
-            color: white;
+            color: #222;
         }
 
         /* About Section */
-        .about-section {
-            padding: 100px 0;
-            background-color: #fff;
-        }
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
 
-        .about-description {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            text-align: center;
-        }
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.video-section {
+    margin-top: 40px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 
         /* Portfolio Section */
         .portfolio-section {
@@ -268,13 +279,33 @@
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-description">I am a web developer and designer with expertise in building user-friendly and visually appealing websites. I focus on responsive design, intuitive user experiences, and clean code.</p>
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p class="about-description">
+                I am a passionate web developer and designer with a keen eye for aesthetics and functionality.
+                My expertise spans modern web technologies, from building responsive websites to creating
+                interactive user experiences. I believe in delivering clean, efficient code and designs that make
+                a lasting impact.
+            </p>
+            <p class="about-description">
+                My journey in web development began with a fascination for creating solutions that not only look
+                great but also function seamlessly across devices. Today, I work with a range of tools and
+                frameworks, focusing on user-first design and performance optimization.
+            </p>
+            <!-- Sección de video de YouTube -->
+            <div class="video-section">
+                <h3>Latest Project Showcase</h3>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
