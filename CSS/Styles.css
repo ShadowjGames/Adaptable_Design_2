@@ -2,7 +2,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: rgb(1, 3, 50);
+    background-color: white;
     color: #fff;
     margin: 0;
     padding: 0;
@@ -83,7 +83,7 @@ p {
     background-image: url('Assets/Eliham/elementor-placeholder-image.webp');
     background-size: cover;
     background-position: center;
-    color: rgb(1, 3, 50);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
