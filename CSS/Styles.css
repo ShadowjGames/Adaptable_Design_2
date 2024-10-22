@@ -80,7 +80,7 @@ p {
 /* Header Section */
 .header {
     height: 100vh;
-    background-image: url('Assets/Eliham/elementor-placeholder-image.webp'); /* Aplica la imagen solo al header */
+    background-image: url('Assets/Eliham/elementor-placeholder-image.webp');
     background-size: cover;
     background-position: center;
     color: white;
@@ -90,6 +90,7 @@ p {
     text-align: center;
     position: relative;
 }
+
 
 .header-title {
     font-size: 3.5rem;
