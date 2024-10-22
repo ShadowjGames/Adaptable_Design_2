@@ -79,7 +79,6 @@ p {
 
 /* Header Section */
 .header {
-.header {
     height: 100vh;
     background-image: url('Assets/Eliham/elementor-placeholder-image.webp'); /* Aplica la imagen solo al header */
     background-size: cover;
