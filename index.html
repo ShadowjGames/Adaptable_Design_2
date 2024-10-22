@@ -1,177 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        nav {
-            margin-top: 15px;
-        }
-
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 1.1rem;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        section.presentation {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        section.presentation h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        section.presentation p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        section.video {
-            position: relative;
-            width: 100%;
-            height: 50vh;
-            overflow: hidden;
-        }
-
-        section.video video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        section.projects {
-            display: flex;
-            justify-content: space-around;
-            background-color: #fff;
-            padding: 50px 0;
-        }
-
-        section.projects .project {
-            flex: 1;
-            max-width: 300px;
-            margin: 0 15px;
-            text-align: center;
-        }
-
-        section.projects .project img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        section.projects .project h3 {
-            margin-top: 15px;
-            font-size: 1.5rem;
-        }
-
-        footer {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-        }
-    </style>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Simple portfolio for showcasing work and skills.">
+    <meta name="author" content="Your Name">
+    <title>Portfolio | Your Name</title>
+    <!-- Bootstrap and CSS -->
+	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    <header>
-        <h1>Bienvenido a Mi Portafolio</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="Games.html">Games</a>
-            <a href="WorkinProgress.html">Work in Progress</a>
-            <a href="Blog.html">Blog</a>
-            <a href="About.html">About</a>
-            <a href="Contact.html">Contact</a>
-            <a href="CV.html">Curriculum Vitae</a>
-        </nav>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content text-center">
+                <h1 class="header-title">Your Name</h1>
+                <h4 class="header-subtitle">Web Developer | Designer</h4>
+                <p class="header-description">I create modern, responsive websites and innovative digital solutions.</p>
+                <button class="btn btn-primary btn-rounded">View Portfolio</button>
+            </div>
+        </div>
     </header>
 
-    <!-- Carta de presentación -->
-    <section class="presentation">
-        <div>
-            <h2>Carta de Presentación</h2>
-            <p>
-                Estimados funcionarios, <br><br>
-                Mi nombre es [Tu Nombre], y soy un profesional dedicado a [área de especialización]. A lo largo de los años, he tenido la oportunidad de trabajar en una variedad de proyectos que me han permitido desarrollar mis habilidades en [competencias clave]. Este portafolio es una muestra de algunos de esos proyectos, donde podrán observar mi enfoque creativo y técnico. Agradezco su tiempo y espero que disfruten explorando mi trabajo. <br><br>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac elit id libero suscipit ultricies. Pellentesque euismod, nisl vel vehicula luctus, leo felis eleifend purus, ut semper erat purus sit amet justo.
-            </p>
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-description">I am a web developer and designer with expertise in building user-friendly and visually appealing websites. I focus on responsive design, intuitive user experiences, and clean code.</p>
         </div>
     </section>
 
-    <!-- Video en pantalla completa -->
-    <section class="video">
-        <video autoplay muted loop>
-            <source src="video/intro.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
-    </section>
-
-    <!-- Proyectos destacados -->
-    <section class="projects">
-        <div class="project">
-            <a href="Games.html">
-                <img src="images/games.jpg" alt="Games Project">
-                <h3>Games</h3>
-            </a>
-        </div>
-        <div class="project">
-            <a href="WorkinProgress.html">
-                <img src="images/wip.jpg" alt="Work in Progress">
-                <h3>Work in Progress</h3>
-            </a>
-        </div>
-        <div class="project">
-            <a href="Blog.html">
-                <img src="images/blog.jpg" alt="Blog">
-                <h3>Blog</h3>
-            </a>
+    <!-- Portfolio Section (Señalización para futuras imágenes) -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">My Work</h2>
+            <div class="portfolio-grid">
+                <!-- Placeholder for portfolio items -->
+                <p class="text-muted">Here you can showcase your latest projects. Each project could include an image, description, and link to view more details.</p>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 [Tu Nombre]. Todos los derechos reservados.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <p>If you would like to work with me or have any questions, feel free to reach out via email or phone.</p>
+            <ul class="contact-info">
+                <li>Email: yourname@example.com</li>
+                <li>Phone: +123 456 7890</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light">
+        <div class="container text-center">
+            <p>© 2024 Your Name. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
