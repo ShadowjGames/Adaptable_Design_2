@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Professional portfolio showcasing web development and design projects.">
     <meta name="author" content="Your Name">
     <title>Portfolio | Your Name</title>
+
     <!-- Bootstrap and Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <style>
-        /* Custom styles */
+        /* Global Styles */
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             background-color: #f4f6f9;
             color: #333;
+            margin: 0;
+            padding: 0;
         }
 
         h1, h2, h3 {
             font-weight: 600;
+            color: #333;
         }
 
+        p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .btn {
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        /* Navbar */
         .navbar {
             position: fixed;
             top: 0;
@@ -30,6 +67,7 @@
             background-color: #007bff;
             z-index: 1000;
             padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .navbar a {
@@ -55,14 +93,9 @@
             align-items: center;
         }
 
-        /* Ensure sections don't overlap with navbar */
-        .header, .about-section, .portfolio-section, .contact-section {
-            margin-top: 70px; /* Adds spacing for the fixed navbar */
-        }
-
         .header {
             height: 100vh;
-            background-image: url('assets/images/header-bg.jpg');
+            background-image: url('Assets/Eliham/elementor-placeholder-image.webp');
             background-size: cover;
             background-position: center;
             color: white;
@@ -73,9 +106,141 @@
             position: relative;
         }
 
-        /* Other styles remain unchanged */
+        .header-title {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .header-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .header-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            color: white;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background-color: #fff;
+        }
+
+        .about-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 100px 0;
+            background-color: #f9fafc;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-item .description {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .portfolio-item h5 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .portfolio-item a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        .social-icons a:hover {
+            color: #0056b3;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px 0;
+            background-color: #343a40;
+            color: white;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Navigation Section -->
@@ -118,7 +283,7 @@
             <div class="portfolio-grid">
                 <!-- Portfolio Item 1 -->
                 <div class="portfolio-item">
-                    <img src="assets/images/project1.jpg" alt="Project 1">
+                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project 1">
                     <div class="description">
                         <h5>Project 1</h5>
                         <p>A modern website built with HTML, CSS, and JavaScript.</p>
@@ -127,7 +292,7 @@
                 </div>
                 <!-- Portfolio Item 2 -->
                 <div class="portfolio-item">
-                    <img src="assets/images/project2.jpg" alt="Project 2">
+                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project 2">
                     <div class="description">
                         <h5>Project 2</h5>
                         <p>An eCommerce platform developed using React and Node.js.</p>
@@ -136,7 +301,7 @@
                 </div>
                 <!-- Portfolio Item 3 -->
                 <div class="portfolio-item">
-                    <img src="assets/images/project3.jpg" alt="Project 3">
+                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project 3">
                     <div class="description">
                         <h5>Project 3</h5>
                         <p>A mobile-responsive blog powered by WordPress.</p>
