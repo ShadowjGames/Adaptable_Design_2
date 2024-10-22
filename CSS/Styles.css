@@ -79,8 +79,9 @@ p {
 
 /* Header Section */
 .header {
+.header {
     height: 100vh;
-    background-image: url('Assets/Eliham/elementor-placeholder-image.webp');
+    background-image: url('Assets/Eliham/elementor-placeholder-image.webp'); /* Aplica la imagen solo al header */
     background-size: cover;
     background-position: center;
     color: white;
@@ -111,8 +112,12 @@ p {
 }
 
 /* About Section */
-.about-grid {
+.about-section {
     background-color: rgb(1, 3, 50);
+    padding: 100px 0;
+}
+    
+.about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -145,7 +150,7 @@ p {
 /* Portfolio Section */
 .portfolio-section {
     padding: 100px 0;
-    background-color: rgb(1, 3, 50);
+    background-color: rgb(1, 3, 50); 
 }
 
 .portfolio-grid {
