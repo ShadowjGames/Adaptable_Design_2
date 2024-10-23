@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
-    <!-- Inline CSS for Positioning -->
+    <!-- Inline CSS for Positioning and Styling -->
     <style>
         .add-blog-section {
             display: none; /* Hidden initially */
@@ -20,9 +20,38 @@
             bottom: 20px;
             right: 20px;
             background-color: white;
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .add-blog-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .add-blog-section input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .add-blog-section button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-blog-section button:hover {
+            background-color: #0056b3;
         }
 
         .add-blog-btn {
@@ -37,6 +66,21 @@
         .add-blog-btn img {
             width: 50px;
             height: 50px;
+        }
+
+        /* Portfolio Items Styling */
+        .portfolio-item {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -60,28 +104,7 @@
         <div class="container">
             <h2 class="section-title">Blog Projects</h2>
             <div class="portfolio-grid" id="blog-container">
-                <!-- Blog item 1 -->
-                <div class="portfolio-item">
-                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
-                    <div class="description">
-                        <h5>Blog Title 1</h5>
-                        <p>Year: 2024</p>
-                        <p>Short description of the blog content giving visitors an idea of what they will see.</p>
-                        <a href="https://www.youtube.com/watch?v=samplevideo" target="_blank">Watch Video</a>
-                    </div>
-                </div>
-
-                <!-- Blog item 2 -->
-                <div class="portfolio-item">
-                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
-                    <div class="description">
-                        <h5>Blog Title 2</h5>
-                        <p>Year: 2023</p>
-                        <p>Short description of the blog content giving visitors an idea of what they will see.</p>
-                        <a href="https://www.youtube.com/watch?v=samplevideo" target="_blank">Watch Video</a>
-                    </div>
-                </div>
-                <!-- More blog items can be added here -->
+                <!-- Blog items will be added here dynamically -->
             </div>
         </div>
     </section>
@@ -90,12 +113,9 @@
     <section class="add-blog-section" id="addBlogFormSection">
         <h3>Add New Blog Item</h3>
         <form id="blogForm">
-            <label for="title">Title:</label>
-            <input type="text" id="title" required>
-            <label for="description">Description:</label>
-            <input type="text" id="description" required>
-            <label for="videoLink">Video Link:</label>
-            <input type="url" id="videoLink" required>
+            <input type="text" id="title" placeholder="Enter blog title" required>
+            <input type="text" id="description" placeholder="Enter blog description" required>
+            <input type="url" id="videoLink" placeholder="Enter video link" required>
             <button type="button" onclick="addNewBlogItem()">Add Blog Item</button>
         </form>
     </section>
@@ -112,6 +132,11 @@
 
     <!-- JavaScript to add new blog items dynamically -->
     <script>
+        // Load saved blog items from localStorage
+        window.onload = function() {
+            loadSavedBlogItems();
+        };
+
         function toggleBlogForm() {
             const formSection = document.getElementById('addBlogFormSection');
             if (formSection.style.display === 'none' || formSection.style.display === '') {
@@ -141,7 +166,33 @@
             `;
 
             container.innerHTML += newItem;
+            saveBlogItem(title, description, videoLink, year);
             toggleBlogForm();  // Hide the form after adding
+        }
+
+        function saveBlogItem(title, description, videoLink, year) {
+            let blogItems = JSON.parse(localStorage.getItem('blogItems')) || [];
+            blogItems.push({ title, description, videoLink, year });
+            localStorage.setItem('blogItems', JSON.stringify(blogItems));
+        }
+
+        function loadSavedBlogItems() {
+            let blogItems = JSON.parse(localStorage.getItem('blogItems')) || [];
+            const container = document.getElementById('blog-container');
+            blogItems.forEach(item => {
+                const newItem = `
+                    <div class="portfolio-item">
+                        <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
+                        <div class="description">
+                            <h5>${item.title}</h5>
+                            <p>Year: ${item.year}</p>
+                            <p>${item.description}</p>
+                            <a href="${item.videoLink}" target="_blank">Watch Video</a>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += newItem;
+            });
         }
     </script>
 
