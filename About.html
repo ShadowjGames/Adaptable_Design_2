@@ -12,6 +12,170 @@
     <link rel="stylesheet" href="CSS/Styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS for Profile Page -->
+    <style>
+        /* Global Styling */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(1, 3, 50); /* Fondo base de la página */
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-nav a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 5px;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .navbar-nav a:hover, .navbar-nav a.active {
+            background-color: #007BFF;
+            border-radius: 5px;
+        }
+
+        /* Image Frame Section */
+        .image-frame {
+            display: flex;
+            justify-content: center;
+            padding-top: 50px; /* Añade espacio para separar la imagen de la barra de navegación */
+        }
+
+        .image-frame img {
+            max-width: 200px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #f9f9f9; /* Blanco más claro para mejor visibilidad */
+            margin-bottom: 20px;
+        }
+
+        .intro-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #e0e0e0; /* Texto ligeramente gris */
+        }
+
+        /* Strengths Section */
+        .strengths-section {
+            padding: 50px 0;
+            background-color: rgba(255, 255, 255, 0.05); /* Fondo translúcido */
+        }
+
+        .strengths-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .strength-item {
+            width: 30%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .strength-item h4 {
+            color: #00FF7F; /* Verde brillante para destacar los títulos */
+            margin-bottom: 10px;
+        }
+
+        .strength-item p {
+            color: #fff;
+        }
+
+        /* Experience Section */
+        .experience-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .experience-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .timeline-item h4 {
+            color: #4CAF50; /* Verde para destacar títulos */
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            color: #fff;
+        }
+
+        /* Links Section */
+        .links-section {
+            padding: 50px 0;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .links-grid {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .link-item a {
+            color: #00BFFF; /* Azul claro para los links */
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        .link-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact-icons a {
+            color: #007BFF;
+            margin: 0 15px;
+            font-size: 2rem;
+        }
+
+        .contact-icons a:hover {
+            color: #0056b3;
+        }
+    </style>
+
 </head>
 
 <body>
