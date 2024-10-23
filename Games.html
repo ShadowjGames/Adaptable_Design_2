@@ -11,7 +11,51 @@
     <link rel="stylesheet" href="CSS/Styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    /* Estilos generales para los recuadros */
+.portfolio-item {
+    background-color: #fff;  /* Fondo blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra sutil */
+    color: #333;  /* Texto oscuro */
+    transition: transform 0.2s ease-in-out;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);  /* Efecto de zoom al hacer hover */
+}
+
+.portfolio-item .description h5 {
+    color: #000;  /* Color oscuro para el título */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.portfolio-item .description p {
+    color: #444;  /* Color gris oscuro para los párrafos */
+    margin-bottom: 10px;
+}
+
+.portfolio-item .description a {
+    color: #0066cc;  /* Enlace en color azul */
+    text-decoration: none;
+}
+
+.portfolio-item .description a:hover {
+    text-decoration: underline;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+}
+</style>
 </head>
+    
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Navigation Section -->
