@@ -75,12 +75,29 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
         }
 
         .portfolio-item img {
             max-width: 100%;
             border-radius: 5px;
             margin-bottom: 10px;
+        }
+
+        .portfolio-item .delete-btn {
+            display: block;
+            margin-top: 10px;
+            padding: 5px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .portfolio-item .delete-btn:hover {
+            background-color: darkred;
         }
     </style>
 </head>
@@ -152,27 +169,32 @@
             const videoLink = document.getElementById('videoLink').value;
             const year = new Date().getFullYear();  // Get current year
 
+            // Create unique HTML file for the blog item
+            const fileName = `SubGamesBase_${Date.now()}.html`;  // Create a unique filename based on timestamp
+            createBlogHTMLFile(fileName);
+
             const container = document.getElementById('blog-container');
             const newItem = `
-                <div class="portfolio-item">
+                <div class="portfolio-item" onclick="window.location.href='${fileName}'">
                     <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
                     <div class="description">
                         <h5>${title}</h5>
                         <p>Year: ${year}</p>
                         <p>${description}</p>
                         <a href="${videoLink}" target="_blank">Watch Video</a>
+                        <button class="delete-btn" onclick="deleteBlogItem('${title}')">Delete</button>
                     </div>
                 </div>
             `;
 
             container.innerHTML += newItem;
-            saveBlogItem(title, description, videoLink, year);
+            saveBlogItem(title, description, videoLink, year, fileName);
             toggleBlogForm();  // Hide the form after adding
         }
 
-        function saveBlogItem(title, description, videoLink, year) {
+        function saveBlogItem(title, description, videoLink, year, fileName) {
             let blogItems = JSON.parse(localStorage.getItem('blogItems')) || [];
-            blogItems.push({ title, description, videoLink, year });
+            blogItems.push({ title, description, videoLink, year, fileName });
             localStorage.setItem('blogItems', JSON.stringify(blogItems));
         }
 
@@ -181,18 +203,48 @@
             const container = document.getElementById('blog-container');
             blogItems.forEach(item => {
                 const newItem = `
-                    <div class="portfolio-item">
+                    <div class="portfolio-item" onclick="window.location.href='${item.fileName}'">
                         <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
                         <div class="description">
                             <h5>${item.title}</h5>
                             <p>Year: ${item.year}</p>
                             <p>${item.description}</p>
                             <a href="${item.videoLink}" target="_blank">Watch Video</a>
+                            <button class="delete-btn" onclick="deleteBlogItem('${item.title}')">Delete</button>
                         </div>
                     </div>
                 `;
                 container.innerHTML += newItem;
             });
+        }
+
+        function deleteBlogItem(title) {
+            let blogItems = JSON.parse(localStorage.getItem('blogItems')) || [];
+            blogItems = blogItems.filter(item => item.title !== title);
+            localStorage.setItem('blogItems', JSON.stringify(blogItems));
+            location.reload();  // Reload page to reflect changes
+        }
+
+        // Function to create a new HTML file for each blog item
+        function createBlogHTMLFile(fileName) {
+            const blogTemplate = `
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>${fileName} - Blog Item</title>
+                    <link rel="stylesheet" href="CSS/Styles.css">
+                </head>
+                <body>
+                    <h1>Welcome to ${fileName}</h1>
+                    <p>This is a dynamic blog item page based on SubGamesBase.html</p>
+                </body>
+                </html>
+            `;
+            
+            // Store the file in localStorage (simulating file creation)
+            localStorage.setItem(fileName, blogTemplate);
         }
     </script>
 
