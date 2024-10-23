@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Detailed professional profile of a Game Designer.">
     <meta name="author" content="Your Name">
-    <title>Profile | Your Name</title>
+    <title>Curriculum Vitae | Your Name</title>
 
     <!-- Link to external CSS -->
-    <link rel="stylesheet" href="CSS/Styles.css">
+    <link rel="stylesheet" href="CSS/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <!-- Navigation Section -->
     <nav class="navbar">
         <div class="container navbar-nav">
@@ -25,95 +24,110 @@
             <a href="Blog.html">Blog</a>
             <a href="About.html">About</a>
             <a href="Contact.html">Contact</a>
-            <a href="CV.html">Curriculum Vitae</a>
+            <a href="CV.html" class="active">Curriculum Vitae</a>
         </div>
     </nav>
 
-    <!-- Image Frame Section -->
-    <section id="image-frame" class="image-frame">
-        <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Profile Picture">
-    </section>
-
-    <!-- Introduction Section -->
-    <section id="introduction" class="intro-section">
+    <!-- CV Section -->
+    <section class="cv-section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="intro-description">
-                I am a passionate student who has dedicated his life to his dream of becoming a Game Designer. My journey began in third grade, inspired by my late father, and since then, I’ve been immersed in the world of video game creation. Currently, I am studying at UPB, working on projects related to animation, video games, and interactive experiences.
+            <h2 class="section-title">Eliham Peláez - Curriculum Vitae</h2>
+            <p class="cv-summary">
+                Con más de 5 años de experiencia en diseño de juegos y desarrollo interactivo, Eliham Peláez ha trabajado en múltiples proyectos para plataformas móviles, web y consolas. Especialista en la creación de experiencias inmersivas, ha demostrado su capacidad para liderar equipos creativos y generar productos innovadores en la industria de los videojuegos.
             </p>
-        </div>
-    </section>
 
-    <!-- Strengths Section -->
-    <section id="strengths" class="strengths-section">
-        <div class="container">
-            <h2 class="section-title">Strengths</h2>
-            <div class="strengths-grid">
-                <div class="strength-item">
-                    <h4>Game Development</h4>
-                    <p>Expertise in Unity and C#, creating immersive and interactive experiences.</p>
-                </div>
-                <div class="strength-item">
-                    <h4>Leadership</h4>
-                    <p>Strong leadership skills developed through collaborative projects and team management.</p>
-                </div>
-                <div class="strength-item">
-                    <h4>Problem-Solving</h4>
-                    <p>Proven ability to tackle complex problems with creative and logical solutions.</p>
-                </div>
+            <ul class="cv-highlights">
+                <li><i class="fas fa-check-circle"></i> Experiencia en Unity y Unreal Engine</li>
+                <li><i class="fas fa-check-circle"></i> Especialización en Game Design y UX/UI</li>
+                <li><i class="fas fa-check-circle"></i> Líder de proyectos de desarrollo de videojuegos</li>
+            </ul>
+
+            <!-- Download CV Button -->
+            <div class="download-cv">
+                <a href="Assets/Eliham/ElihamPelaezCV.doc" download="ElihamPelaezCV.doc" class="btn-download">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <h4>Descubre-te Project</h4>
-                    <p>Collaborated with the Sabaneta mayor's office to improve teamwork and project management skills, using Unity and C#.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Game Development Summer Course</h4>
-                    <p>Completed a course at Eafit where I developed my second project in game development and robotics.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>Human Resources Technician</h4>
-                    <p>Acquired social and leadership skills that enhance my understanding of teamwork and workplace environments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
 
-    <!-- Links Section -->
-    <section id="links" class="links-section">
-        <div class="container">
-            <h2 class="section-title">Related Links</h2>
-            <div class="links-grid">
-                <div class="link-item">
-                    <a href="https://www.example.com">Article on Game Development Trends</a>
-                </div>
-                <div class="link-item">
-                    <a href="https://www.example.com">Eafit Robotics and Game Dev Course</a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Custom CSS for CV Page -->
+    <style>
+        .cv-section {
+            padding: 60px 0;
+            text-align: center;
+        }
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <div class="contact-icons">
-                <a href="https://www.linkedin.com/in/yourname"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </section>
+        .cv-section .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
 
-    <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+        .cv-summary {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #555;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cv-highlights {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cv-highlights li {
+            font-size: 1.1rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .cv-highlights li i {
+            color: #4CAF50;
+            margin-right: 10px;
+        }
+
+        .download-cv {
+            margin-top: 30px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #007BFF;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-download i {
+            margin-right: 10px;
+        }
+
+        .btn-download:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+    </style>
 
 </body>
 
