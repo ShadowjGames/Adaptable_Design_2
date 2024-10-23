@@ -26,14 +26,15 @@ function addNewBlogItem() {
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
     const videoLink = document.getElementById('videoLink').value;
-    const year = new Date().getFullYear();  // Get current year
+    const date = new Date();
+    const formattedDate = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;  // Día, mes y año
 
-    // Create unique HTML file for the blog item
-    const fileName = `SubGamesBase_${Date.now()}.html`;  // Create a unique filename based on timestamp
+    // Crear archivo HTML único para el elemento del blog
+    const fileName = `SubGamesBase_${Date.now()}.html`;  // Crear un nombre de archivo único basado en la marca de tiempo
     createBlogHTMLFile(fileName);
 
     const container = document.getElementById('blog-container');
-    const newItemId = Date.now();  // Unique ID for the new blog item
+    const newItemId = Date.now();  // ID único para el nuevo elemento del blog
     const newItem = `
         <div class="portfolio-item" id="item-${newItemId}" onclick="window.location.href='${fileName}'">
             <button class="delete-btn" onclick="deleteBlogItem(${newItemId}, event)">
@@ -41,27 +42,27 @@ function addNewBlogItem() {
             </button>
             <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
             <div class="description">
-                <h5>${title}</h5>
-                <p>Year: ${year}</p>
-                <p>${description}</p>
-                <a href="${videoLink}" target="_blank">Watch Video</a>
+                <h5>${title}</h5>  <!-- Título al inicio -->
+                <p><strong>Published on:</strong> ${formattedDate}</p>  <!-- Mostrar día, mes, año -->
+                <p>${description}</p>  <!-- Descripción -->
+                <a href="${videoLink}" target="_blank">Watch Video</a>  <!-- Enlace del video -->
             </div>
         </div>
     `;
 
     container.innerHTML += newItem;
-    saveBlogItem(newItemId, title, description, videoLink, year, fileName);
-    toggleBlogForm();  // Hide the form after adding
+    saveBlogItem(newItemId, title, description, videoLink, formattedDate, fileName);  // Guardar con la nueva fecha completa
+    toggleBlogForm();  // Ocultar el formulario después de añadir
 }
 
-function saveBlogItem(id, title, description, videoLink, year, fileName) {
-    let blogItems = JSON.parse(localStorage.getItem(pageKey)) || [];  // Load items specific to the current page
-    blogItems.push({ id, title, description, videoLink, year, fileName });
-    localStorage.setItem(pageKey, JSON.stringify(blogItems));  // Save items under the page-specific key
+function saveBlogItem(id, title, description, videoLink, formattedDate, fileName) {
+    let blogItems = JSON.parse(localStorage.getItem(pageKey)) || [];  // Cargar los elementos específicos de la página
+    blogItems.push({ id, title, description, videoLink, formattedDate, fileName });
+    localStorage.setItem(pageKey, JSON.stringify(blogItems));  // Guardar los elementos bajo la clave específica de la página
 }
 
 function loadSavedBlogItems() {
-    let blogItems = JSON.parse(localStorage.getItem(pageKey)) || [];  // Load items specific to the current page
+    let blogItems = JSON.parse(localStorage.getItem(pageKey)) || [];  // Cargar los elementos específicos de la página
     const container = document.getElementById('blog-container');
     blogItems.forEach(item => {
         const newItem = `
@@ -71,10 +72,10 @@ function loadSavedBlogItems() {
                 </button>
                 <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
                 <div class="description">
-                    <h5>${item.title}</h5>
-                    <p>Year: ${item.year}</p>
-                    <p>${item.description}</p>
-                    <a href="${item.videoLink}" target="_blank">Watch Video</a>
+                    <h5>${item.title}</h5>  <!-- Título al inicio -->
+                    <p><strong>Published on:</strong> ${item.formattedDate}</p>  <!-- Mostrar fecha completa -->
+                    <p>${item.description}</p>  <!-- Descripción -->
+                    <a href="${item.videoLink}" target="_blank">Watch Video</a>  <!-- Enlace del video -->
                 </div>
             </div>
         `;
