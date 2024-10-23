@@ -19,7 +19,7 @@ function addNewBlogItem() {
     const year = new Date().getFullYear();  // Get current year
 
     // Create unique HTML file for the blog item
-    const fileName = `SubGamesBase_${Date.now()}.html`;  // Create a unique filename based on timestamp
+    const fileName = `SubBlogBase_${Date.now()}.html`;  // Create a unique filename based on timestamp
     createBlogHTMLFile(fileName);
 
     const container = document.getElementById('blog-container');
@@ -29,7 +29,7 @@ function addNewBlogItem() {
             <button class="delete-btn" onclick="deleteBlogItem(${newItemId}, event)">
                 <img src="Assets/Juanes/[CITYPNG.COM]Download Cross False X Red Round Icon PNG - 700x700.png" alt="Delete">
             </button>
-            <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
+            <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Blog Image">
             <div class="description">
                 <h5>${title}</h5>
                 <p>Year: ${year}</p>
@@ -59,7 +59,7 @@ function loadSavedBlogItems() {
                 <button class="delete-btn" onclick="deleteBlogItem(${item.id}, event)">
                     <img src="Assets/Juanes/[CITYPNG.COM]Download Cross False X Red Round Icon PNG - 700x700.png" alt="Delete">
                 </button>
-                <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
+                <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Blog Image">
                 <div class="description">
                     <h5>${item.title}</h5>
                     <p>Year: ${item.year}</p>
@@ -72,7 +72,6 @@ function loadSavedBlogItems() {
     });
 }
 
-// Modified delete function that prevents event propagation and only deletes the specific item
 function deleteBlogItem(id, event) {
     event.stopPropagation();  // Prevent the click event from triggering the redirection
 
@@ -94,11 +93,11 @@ function createBlogHTMLFile(fileName) {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>${fileName} - Blog Item</title>
-            <link rel="stylesheet" href="CSS/Styles.css">
+            <link rel="stylesheet" href="CSS/BlogStyles.css">
         </head>
         <body>
             <h1>Welcome to ${fileName}</h1>
-            <p>This is a dynamic blog item page based on SubGamesBase.html</p>
+            <p>This is a dynamic blog item page.</p>
         </body>
         </html>
     `;
