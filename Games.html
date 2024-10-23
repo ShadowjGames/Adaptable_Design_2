@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Professional portfolio showcasing web development and design projects.">
+    <meta name="description" content="Blog showcase featuring various articles and projects.">
     <meta name="author" content="Your Name">
-    <title>Portfolio | Your Name</title>
+    <title>Blog | Your Name</title>
 
     <!-- Bootstrap and Custom CSS -->
     <link rel="stylesheet" href="CSS/Styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
     <!-- Navigation Section -->
@@ -28,3 +26,61 @@
             <a href="CV.html">Curriculum Vitae</a>
         </div>
     </nav>
+
+    <!-- Blog Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Blog Projects</h2>
+            <div class="portfolio-grid" id="blog-container">
+                <!-- Blog item 1 -->
+                <div class="portfolio-item">
+                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
+                    <div class="description">
+                        <h5>Blog Title 1</h5>
+                        <p>Year: 2024</p>
+                        <p>Short description of the blog content giving visitors an idea of what they will see.</p>
+                        <a href="https://www.youtube.com/watch?v=samplevideo" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+
+                <!-- Blog item 2 -->
+                <div class="portfolio-item">
+                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
+                    <div class="description">
+                        <h5>Blog Title 2</h5>
+                        <p>Year: 2023</p>
+                        <p>Short description of the blog content giving visitors an idea of what they will see.</p>
+                        <a href="https://www.youtube.com/watch?v=samplevideo" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+                <!-- More blog items can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to add new blog items dynamically -->
+    <script>
+        function addNewBlogItem(title, year, description, videoLink) {
+            const container = document.getElementById('blog-container');
+            const newItem = `
+                <div class="portfolio-item">
+                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project Image">
+                    <div class="description">
+                        <h5>${title}</h5>
+                        <p>Year: ${year}</p>
+                        <p>${description}</p>
+                        <a href="${videoLink}" target="_blank">Watch Video</a>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += newItem;
+        }
+    </script>
+
+</body>
+</html>
