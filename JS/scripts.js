@@ -1,4 +1,14 @@
-// Load saved blog items from localStorage
+// Generate or retrieve a unique page key to differentiate between different tabs/pages
+const pageKey = getPageKey();  // Generates or retrieves a unique key for the current page/tab
+
+// Function to generate a unique key for each tab/page
+function getPageKey() {
+    // This can be manually set based on the page or dynamically generated
+    const currentPage = window.location.pathname.split("/").pop().replace(".html", "");  // Example: "Blog", "Games"
+    return `page_${currentPage}`;
+}
+
+// Load saved blog items specific to the current page/tab
 window.onload = function() {
     loadSavedBlogItems();
 };
@@ -45,13 +55,13 @@ function addNewBlogItem() {
 }
 
 function saveBlogItem(id, title, description, videoLink, year, fileName) {
-    let blogItems = JSON.parse(localStorage.getItem('blogItems')) || [];
+    let blogItems = JSON.parse(localStorage.getItem(pageKey)) || [];  // Load items specific to the current page
     blogItems.push({ id, title, description, videoLink, year, fileName });
-    localStorage.setItem('blogItems', JSON.stringify(blogItems));
+    localStorage.setItem(pageKey, JSON.stringify(blogItems));  // Save items under the page-specific key
 }
 
 function loadSavedBlogItems() {
-    let blogItems = JSON.parse(localStorage.getItem('blogItems')) || [];
+    let blogItems = JSON.parse(localStorage.getItem(pageKey)) || [];  // Load items specific to the current page
     const container = document.getElementById('blog-container');
     blogItems.forEach(item => {
         const newItem = `
@@ -76,9 +86,9 @@ function loadSavedBlogItems() {
 function deleteBlogItem(id, event) {
     event.stopPropagation();  // Prevent the click event from triggering the redirection
 
-    let blogItems = JSON.parse(localStorage.getItem('blogItems')) || [];
+    let blogItems = JSON.parse(localStorage.getItem(pageKey)) || [];  // Load items specific to the current page
     blogItems = blogItems.filter(item => item.id !== id);  // Remove the specific item
-    localStorage.setItem('blogItems', JSON.stringify(blogItems));
+    localStorage.setItem(pageKey, JSON.stringify(blogItems));  // Save the updated list under the page-specific key
     
     // Remove the item from the DOM
     const itemElement = document.getElementById(`item-${id}`);
