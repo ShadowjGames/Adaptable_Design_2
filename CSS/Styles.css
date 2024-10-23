@@ -14,6 +14,8 @@ body {
 }
 
 h1, h2, h3 {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
     font-weight: 600;
     color: #333;
 }
@@ -182,6 +184,8 @@ p {
 }
 
 h1, h2, h3 {
+    margin-top: 10px; 
+    margin-bottom: 10px; 
     font-weight: 600;
     color: #fff;
 }
@@ -219,7 +223,7 @@ p {
 /* Navbar */
         .navbar {
             background-color: #333;
-            padding: 15px;
+            padding: 10px 0;
             text-align: center;
             position: sticky;
             top: 0;
@@ -248,9 +252,11 @@ p {
     background-image: url('Assets/Eliham/elementor-placeholder-image.webp');
     background-size: cover;
     background-position: center;
+    padding-top: 50px; 
+    padding-bottom: 0;
     color: white;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
     overflow: hidden;  
