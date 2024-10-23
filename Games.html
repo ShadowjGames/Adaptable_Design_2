@@ -27,6 +27,22 @@
         </div>
     </nav>
 
+    <!-- Form to Add New Blog Item -->
+    <section class="add-blog-section">
+        <div class="container">
+            <h3>Add New Blog Item</h3>
+            <form id="blogForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+                <label for="description">Description:</label>
+                <input type="text" id="description" required>
+                <label for="videoLink">Video Link:</label>
+                <input type="url" id="videoLink" required>
+                <button type="button" onclick="addNewBlogItem()">Add Blog Item</button>
+            </form>
+        </div>
+    </section>
+
     <!-- Blog Section -->
     <section class="portfolio-section">
         <div class="container">
@@ -65,7 +81,12 @@
 
     <!-- JavaScript to add new blog items dynamically -->
     <script>
-        function addNewBlogItem(title, year, description, videoLink) {
+        function addNewBlogItem() {
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const videoLink = document.getElementById('videoLink').value;
+            const year = new Date().getFullYear();  // Get current year
+
             const container = document.getElementById('blog-container');
             const newItem = `
                 <div class="portfolio-item">
@@ -78,7 +99,18 @@
                     </div>
                 </div>
             `;
+
             container.innerHTML += newItem;
+            saveAsHTML();
+        }
+
+        function saveAsHTML() {
+            const content = document.documentElement.outerHTML;
+            const blob = new Blob([content], { type: 'text/html' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'blog.html';
+            link.click();
         }
     </script>
 
