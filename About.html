@@ -46,7 +46,7 @@
 
         .section-title {
             font-size: 2.5rem;
-            color: #f9f9f9; /* Blanco más claro para mejor visibilidad */
+            color: #333; /* Blanco más claro para mejor visibilidad */
             margin-bottom: 20px;
         }
 
@@ -88,15 +88,17 @@
         }
 
         /* Experience Section */
-        .experience-section {
-            padding: 50px 0;
-            text-align: center;
-        }
+        .experience-section .section-title {
+    color: #333; /* Gris oscuro para el título */
+}
 
-        .experience-timeline {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+.experience-timeline .timeline-item h4 {
+    color: #555; /* Un gris ligeramente más claro para los subtítulos */
+}
+
+.experience-timeline .timeline-item p {
+    color: #dcdcdc; /* Un gris suave para los párrafos */
+}
 
         .timeline-item {
             background-color: rgba(255, 255, 255, 0.1);
@@ -134,22 +136,6 @@
 
         .link-item a:hover {
             text-decoration: underline;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .contact-icons a {
-            color: #007BFF;
-            margin: 0 15px;
-            font-size: 2rem;
-        }
-
-        .contact-icons a:hover {
-            color: #0056b3;
         }
 
         /* Footer */
