@@ -1,29 +1,271 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - About</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Detailed professional profile of a Game Designer.">
+    <meta name="author" content="Your Name">
+    <title>Profile | Your Name</title>
+
+    <!-- Bootstrap and Custom CSS -->
+    <link rel="stylesheet" href="CSS/Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+
+        .intro-section {
+            padding: 100px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .intro-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .strengths-section {
+            padding: 100px 0;
+            background-color: #f9fafc;
+            text-align: center;
+        }
+
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .strength-item {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .strength-item h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .strength-item p {
+            font-size: 1rem;
+        }
+
+        .experience-section {
+            padding: 100px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .experience-timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+        }
+
+        .timeline-item h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .links-section {
+            padding: 100px 0;
+            background-color: #f9fafc;
+            text-align: center;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .link-item {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .link-item a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .link-item a:hover {
+            color: #0056b3;
+        }
+
+        .contact-section {
+            padding: 100px 0;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contact-icons a {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .contact-icons a:hover {
+            color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .strengths-grid, .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>About Me</h1>
 
-    <a href="index.html">Home</a>
-    <a href="Games.html">Games</a>
-    <a href="WorkinProgress.html">Work in Progress</a>
-    <a href="Blog.html">Blog</a>
-    <a href="About.html">About</a>
-    <a href="Contact.html">Contact</a>
-    <a href="CV.html">CV</a>
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <div class="container navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="Games.html">Games</a>
+            <a href="WorkinProgress.html">Work in Progress</a>
+            <a href="Blog.html">Blog</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="CV.html">Curriculum Vitae</a>
+        </div>
+    </nav>
 
-    <p>I am a passionate student who has dedicated his life to his dream of becoming a Game Designer. My journey began in third grade, when my inspiration came from my late father, who battled ALS. Since then, I've been immersed in the world of video game creation. In sixth grade, I started teaching my peers how Scratch worked and how to approach programming logic.
+    <!-- Introduction Section -->
+    <section id="introduction" class="intro-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="intro-description">
+                I am a passionate student who has dedicated his life to his dream of becoming a Game Designer. My journey began in third grade, inspired by my late father, and since then, I’ve been immersed in the world of video game creation. Currently, I am studying at UPB, working on projects related to animation, video games, and interactive experiences.
+            </p>
+        </div>
+    </section>
 
-        My experience expanded in seventh grade, when I collaborated in the "Descubre-te" project with the Sabaneta mayor's office, promoting teamwork and the improvement of the municipality. Here, I had my first exposure to Unity and C#. In 2018, I expanded my skills by completing a Game Developing and Robotics summer course at Eafit, where I developed my second project.
-        
-        In 2020, I decided to strengthen my social and leadership skills by enrolling in a Human Resources technician. This allowed me to better understand people's intentions and how to create optimal work environments, essential skills for my future career in the video game industry.
-        
-        Currently, I continue my training at the UPB, leading projects related to animation, video games and interactive experiences. My dedication and passion for the gaming industry drives me to continue growing and contributing to the exciting world of video game creation.
-    </p>
+    <!-- Strengths Section -->
+    <section id="strengths" class="strengths-section">
+        <div class="container">
+            <h2 class="section-title">Strengths</h2>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <h4>Game Development</h4>
+                    <p>Expertise in Unity and C#, creating immersive and interactive experiences.</p>
+                </div>
+                <div class="strength-item">
+                    <h4>Leadership</h4>
+                    <p>Strong leadership skills developed through collaborative projects and team management.</p>
+                </div>
+                <div class="strength-item">
+                    <h4>Problem-Solving</h4>
+                    <p>Proven ability to tackle complex problems with creative and logical solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <h4>Descubre-te Project</h4>
+                    <p>Collaborated with the Sabaneta mayor's office to improve teamwork and project management skills, using Unity and C#.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Game Development Summer Course</h4>
+                    <p>Completed a course at Eafit where I developed my second project in game development and robotics.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Human Resources Technician</h4>
+                    <p>Acquired social and leadership skills that enhance my understanding of teamwork and workplace environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links Section -->
+    <section id="links" class="links-section">
+        <div class="container">
+            <h2 class="section-title">Related Links</h2>
+            <div class="links-grid">
+                <div class="link-item">
+                    <a href="https://www.example.com">Article on Game Development Trends</a>
+                </div>
+                <div class="link-item">
+                    <a href="https://www.example.com">Eafit Robotics and Game Dev Course</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-icons">
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:email@example.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
