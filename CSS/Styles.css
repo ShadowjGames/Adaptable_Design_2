@@ -207,6 +207,99 @@ p {
 .footer p {
     margin: 0;
 }
+/* Styling for Blog Page */
+
+/* Add Blog Section */
+.add-blog-section {
+    display: none; /* Hidden initially */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.add-blog-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.add-blog-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-blog-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-blog-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Add Blog Button */
+.add-blog-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.add-blog-btn img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Portfolio Items Styling */
+.portfolio-item {
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style for Delete Button (X) */
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.delete-btn img:hover {
+    transform: scale(1.1);
+}
 
 /* Responsive Design */
 @media (max-width: 992px) {
