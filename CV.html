@@ -62,69 +62,62 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
+            background-color: rgb(1, 3, 50); /* Fondo base de la página */
+            color: #fff;
         }
 
         .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #007bff;
-    z-index: 1000;
-    padding: 10px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-}
+        .navbar-nav a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 5px;
+            font-size: 14px;
+            display: inline-block;
+        }
 
-.navbar a:hover {
-    background-color: #0056b3;
-    color: white;
-}
-
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        .navbar-nav a:hover, .navbar-nav a.active {
+            background-color: #007BFF;
+            border-radius: 5px;
+        }
 
         /* CV Section Styling */
         .cv-section {
-            background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 200, 255, 0.8)), 
-                url('https://example.com/background-image.jpg') no-repeat center center;
-            background-size: cover;
+            background: rgba(255, 255, 255, 0.1); /* Fondo translúcido */
             padding: 80px 0;
             color: #fff;
             text-align: center;
         }
 
         .cv-container {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para contraste */
             padding: 40px;
             border-radius: 10px;
             max-width: 800px;
             margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para resaltarlo */
         }
 
         .section-title {
             font-size: 3rem;
             font-weight: 600;
             margin-bottom: 20px;
+            color: #f9f9f9; /* Color blanco más claro */
         }
 
         .cv-summary {
             font-size: 1.2rem;
             margin-bottom: 30px;
-            color: #fff;
+            color: #e0e0e0; /* Texto ligeramente gris para mejor legibilidad */
         }
 
         .cv-highlights {
@@ -138,14 +131,14 @@
 
         .cv-highlights li {
             font-size: 1.1rem;
-            color: #fff;
+            color: #f9f9f9; /* Color blanco para más visibilidad */
             display: flex;
             align-items: center;
             margin: 10px 20px;
         }
 
         .cv-highlights li i {
-            color: #4CAF50;
+            color: #00FF7F; /* Verde brillante para hacer más llamativo los íconos */
             margin-right: 10px;
         }
 
@@ -176,7 +169,7 @@
         .footer {
             text-align: center;
             padding: 20px;
-            background-color: #333;
+            background-color: #222;
             color: #fff;
         }
     </style>
