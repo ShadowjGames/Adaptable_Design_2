@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Blog</title>
-</head>
-<body>
-    <h1>Blogs and Vlogs</h1>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Blog showcase featuring various articles and projects.">
+    <meta name="author" content="Your Name">
+    <title>Blog | Your Name</title>
 
-    <a href="index.html">Home</a>
-    <a href="Games.html">Games</a>
-    <a href="WorkinProgress.html">Work in Progress</a>
-    <a href="Blog.html">Blog</a>
-    <a href="About.html">About</a>
-    <a href="Contact.html">Contact</a>
-    <a href="CV.html">CV</a>
+    <!-- Bootstrap and Custom CSS -->
+    <link rel="stylesheet" href="CSS/Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <div class="container navbar-nav">
+            <a href="index.html">Home</a>
+            <a href="Games.html">Games</a>
+            <a href="WorkinProgress.html">Work in Progress</a>
+            <a href="Blog.html">Blog</a>
+            <a href="About.html">About</a>
+            <a href="Contact.html">Contact</a>
+            <a href="CV.html">Curriculum Vitae</a>
+        </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <section class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Blog</h2>
+            <div class="portfolio-grid" id="blog-container">
+                <!-- Blog items will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Form to Add New Blog Item (Initially Hidden) -->
+    <section class="add-blog-section" id="addBlogFormSection">
+        <h3>Add New Blog Item</h3>
+        <form id="blogForm">
+            <input type="text" id="title" placeholder="Enter blog title" required>
+            <input type="text" id="description" placeholder="Enter blog description" required>
+            <input type="url" id="videoLink" placeholder="Enter video link" required>
+            <button type="button" onclick="addNewBlogItem()">Add Blog Item</button>
+        </form>
+    </section>
+
+    <!-- Button to Show Form (Plus Icon) -->
+    <button class="add-blog-btn" onclick="toggleBlogForm()">
+        <img src="Assets/Juanes/8922789.png" alt="Add Blog Item">
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="JS/scripts.js"></script>
+
 </body>
 </html>
