@@ -17,8 +17,52 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #010332; /* Fondo base de la página */
+            background-color: #010332;
             color: white;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-nav a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin: 0 5px;
+            font-size: 14px;
+            display: inline-block;
+        }
+
+        .navbar-nav a:hover {
+            color: #0056b3;
         }
 
         /* Header Section */
@@ -36,7 +80,7 @@
         .header-content {
             position: relative;
             z-index: 2;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 8px;
         }
@@ -72,16 +116,36 @@
             background-color: #0056b3;
         }
 
+        /* About Section */
+        .about-section {
+            padding: 100px 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        .about-description p {
+            font-size: 1rem;
+            color: #666;
+        }
+
         /* Portfolio Section */
-        .portfolio-section .section-title {
-            color: white; /* Forzar color blanco para mayor visibilidad */
+        .portfolio-section {
+            padding: 100px 0;
         }
 
         .portfolio-item .description {
-            color: white; /* Asegurar que las descripciones sean visibles */
+            color: white;
         }
 
-        /* Responsiveness */
+        /* Footer Section */
+        .footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .header-title {
                 font-size: 2.5rem;
@@ -129,25 +193,18 @@
     <section id="about" class="about-section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <!-- Left side: Text content -->
-                <div class="about-description">
-                    <p>
-                        I am a passionate web developer and designer with a keen eye for aesthetics and functionality.
-                        My expertise spans modern web technologies, from building responsive websites to creating
-                        interactive user experiences. I believe in delivering clean, efficient code and designs that make
-                        a lasting impact.
-                    </p>
-                    <p>
-                        My journey in web development began with a fascination for creating solutions that not only look
-                        great but also function seamlessly across devices. Today, I work with a range of tools and
-                        technologies to turn ideas into reality.
-                    </p>
-                </div>
-                <!-- Right side: Video content -->
-                <div class="video-section">
-                    <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" allowfullscreen></iframe>
-                </div>
+            <div class="about-description">
+                <p>
+                    I am a passionate web developer and designer with a keen eye for aesthetics and functionality.
+                    My expertise spans modern web technologies, from building responsive websites to creating
+                    interactive user experiences. I believe in delivering clean, efficient code and designs that make
+                    a lasting impact.
+                </p>
+                <p>
+                    My journey in web development began with a fascination for creating solutions that not only look
+                    great but also function seamlessly across devices. Today, I work with a range of tools and
+                    technologies to turn ideas into reality.
+                </p>
             </div>
         </div>
     </section>
@@ -155,35 +212,17 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2 class="section-title">My Work</h2> <!-- Título corregido para mayor visibilidad -->
+            <h2 class="section-title">My Work</h2>
             <div class="portfolio-grid">
-                <!-- Portfolio Item 1 -->
                 <div class="portfolio-item">
                     <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project 1">
                     <div class="description">
                         <h5>Project 1</h5>
-                        <p>WORK IN PROGESS - Updated description with latest commit</p> <!-- Descripción actualizada -->
+                        <p>WORK IN PROGRESS - Updated description with latest commit</p>
                         <a href="WorkinProgress.html" class="btn btn-outline-primary btn-sm">View Details</a>
                     </div>
                 </div>
-                <!-- Portfolio Item 2 -->
-                <div class="portfolio-item">
-                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project 2">
-                    <div class="description">
-                        <h5>Project 2</h5>
-                        <p>GAMES</p>
-                        <a href="Games.html" class="btn btn-outline-primary btn-sm">View Details</a>
-                    </div>
-                </div>
-                <!-- Portfolio Item 3 -->
-                <div class="portfolio-item">
-                    <img src="Assets/Eliham/elementor-placeholder-image.webp" alt="Project 3">
-                    <div class="description">
-                        <h5>Project 3</h5>
-                        <p>BLOG</p>
-                        <a href="Blog.html" class="btn btn-outline-primary btn-sm">View Details</a>
-                    </div>
-                </div>
+                <!-- Additional Portfolio Items can be added similarly -->
             </div>
         </div>
     </section>
