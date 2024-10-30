@@ -18,7 +18,7 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #010332; /* Fondo base de la página */
+            background-color: #010332;
             color: white;
         }
 
@@ -37,7 +37,7 @@
         .header-content {
             position: relative;
             z-index: 2;
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 8px;
         }
@@ -75,11 +75,22 @@
 
         /* Portfolio Section */
         .portfolio-section .section-title {
-            color: white; /* Forzar color blanco para mayor visibilidad */
+            color: white;
+        }
+
+        .portfolio-item .description h5 {
+            color: #ccc; /* Cambia a un tono gris más oscuro para mayor visibilidad */
         }
 
         .portfolio-item .description {
-            color: white; /* Asegurar que las descripciones sean visibles */
+            color: white;
+        }
+
+        /* Video Styling */
+        .video-section iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
         }
 
         /* Responsiveness */
@@ -147,7 +158,7 @@
                 </div>
                 <!-- Right side: Video content -->
                 <div class="video-section">
-                    <iframe src="https://www.youtube.com/watch?v=Fjyre7IAIo8" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Fjyre7IAIo8" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -156,7 +167,7 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2 class="section-title">My Work</h2> <!-- Título corregido para mayor visibilidad -->
+            <h2 class="section-title">My Work</h2>
             <div class="portfolio-grid">
                 <!-- Portfolio Item 1 -->
                 <div class="portfolio-item">
