@@ -1,0 +1,20 @@
+{
+  "name": "adaptable_design_2",
+  "version": "1.0.0",
+  "description": "**Link del Figma:** https://www.figma.com/proto/ePqzsu9ki7BdzWktzXdyIB/Wireframing-(Copy)?node-id=0-1&t=E6BJ4XwaP9pAeZj3-1",
+
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.13.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "firebase": "^11.0.1"
+  }
+}
